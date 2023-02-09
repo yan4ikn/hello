@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksyanademo-2233"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksyanademo-2233"
+  template:
+    metadata:
+      labels:
+        app: "aksyanademo-2233"
+    spec:
+      containers:
+        - name: "aksyanademo-2233"
+          image: "acrdemoyana.azurecr.io/aksyanademo"
+          ports:
+          - containerPort: 80
